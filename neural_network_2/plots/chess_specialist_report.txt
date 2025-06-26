@@ -1,0 +1,33 @@
+=== CHESS SPECIALIST CNN REPORT ===
+Model: Custom CNN designed for chess pieces
+Architecture: Multi-scale + Attention + Specialized branches
+Best Validation Accuracy: 17.27%
+Total Parameters: 2,372,614
+
+ARCHITECTURE FEATURES:
+1. Multi-scale feature extraction (3x3, 5x5, 7x7 filters)
+2. Attention mechanism for top part of pieces
+3. Specialized branches for tall vs short pieces
+4. Class weights for King/Queen (2.5x)
+
+PER-CLASS RESULTS:
+Bishop: 0.0% (support: 17)
+King: 0.0% (support: 18)
+Knight: 0.0% (support: 18)
+Pawn: 33.3% (support: 21)
+Queen: 70.6% (support: 17)
+Rook: 0.0% (support: 19)
+
+DETAILED CLASSIFICATION REPORT:
+              precision    recall  f1-score   support
+
+      Bishop       0.00      0.00      0.00        17
+        King       0.00      0.00      0.00        18
+      Knight       0.00      0.00      0.00        18
+        Pawn       0.23      0.33      0.27        21
+       Queen       0.17      0.71      0.27        17
+        Rook       0.00      0.00      0.00        19
+
+    accuracy                           0.17       110
+   macro avg       0.07      0.17      0.09       110
+weighted avg       0.07      0.17      0.09       110
